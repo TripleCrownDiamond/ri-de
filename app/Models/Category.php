@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Category extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'name_fr',
+        'name_de',
+        'slug',
+        'parent_id',
+        'position',
+    ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(self::class, 'parent_id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(self::class, 'parent_id');
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
+    }
+}
+
