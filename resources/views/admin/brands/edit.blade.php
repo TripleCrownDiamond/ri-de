@@ -13,7 +13,7 @@
                 <div>
                     <label class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Nom de la marque</label>
                     <input type="text" name="name" value="{{ old('name', $brand->name ?? '') }}" required
-                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-red-600 font-bold transition-all">
+                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 font-bold transition-all">
                 </div>
 
                 <div>
@@ -29,12 +29,12 @@
                             </template>
                             
                             <div x-show="uploading" class="absolute inset-0 bg-white/80 flex items-center justify-center">
-                                <div class="w-12 h-12 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+                                <div class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
                             </div>
                         </div>
 
                         <div class="flex-1">
-                            <label class="cursor-pointer inline-flex items-center px-6 py-3 bg-gray-900 text-white text-xs font-black uppercase tracking-widest rounded-xl hover:bg-red-600 transition-colors">
+                            <label class="cursor-pointer inline-flex items-center px-6 py-3 bg-gray-900 text-white text-xs font-black uppercase tracking-widest rounded-xl hover:bg-blue-600 transition-colors">
                                 Choisir un logo
                                 <input type="file" class="hidden" @change="uploadLogo($event)">
                             </label>
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="pt-4">
-                    <button type="submit" class="w-full py-4 bg-red-600 text-white font-black uppercase tracking-widest rounded-2xl shadow-xl shadow-red-900/20 hover:bg-red-700 hover:scale-[1.02] active:scale-95 transition-all">
+                    <button type="submit" class="w-full py-4 bg-blue-600 text-white font-black uppercase tracking-widest rounded-2xl shadow-xl shadow-red-900/20 hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all">
                         {{ isset($brand) ? 'Mettre à jour' : 'Créer la marque' }}
                     </button>
                 </div>

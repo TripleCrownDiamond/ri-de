@@ -28,7 +28,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between px-8 py-6 bg-gray-950">
                     <span class="text-xl font-black tracking-tighter uppercase">
-                        Admin<span class="text-red-600">.</span>
+                        Admin<span class="text-blue-600">.</span>
                     </span>
                     <button @click="sidebarOpen = false" class="lg:hidden">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -119,7 +119,7 @@
                 @endif
 
                 @if($errors->any())
-                    <div class="mb-8 p-4 bg-red-50 border border-red-100 text-red-700 rounded-2xl shadow-sm">
+                    <div class="mb-8 p-4 bg-blue-50 border border-blue-100 text-blue-700 rounded-2xl shadow-sm">
                         <ul class="list-disc list-inside space-y-1">
                             @foreach($errors->all() as $error)
                                 <li>{{ $error }}</li>

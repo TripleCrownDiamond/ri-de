@@ -7,7 +7,7 @@
     <div class="bg-white rounded-[2.5rem] shadow-sm border border-gray-100 overflow-hidden">
         <div class="p-8 border-b border-gray-100 flex items-center justify-between bg-gray-50/50">
             <h3 class="text-xl font-black text-gray-900 uppercase tracking-tighter">Liste des pages</h3>
-            <a href="{{ route('admin.legal-pages.create', ['locale' => app()->getLocale()]) }}" class="px-6 py-3 bg-red-600 text-white text-sm font-bold rounded-2xl shadow-lg shadow-red-900/20 hover:scale-105 transition-all">
+            <a href="{{ route('admin.legal-pages.create', ['locale' => app()->getLocale()]) }}" class="px-6 py-3 bg-blue-600 text-white text-sm font-bold rounded-2xl shadow-lg shadow-red-900/20 hover:scale-105 transition-all">
                 + Nouvelle page
             </a>
         </div>
@@ -46,7 +46,7 @@
                                 <form action="{{ route('admin.legal-pages.destroy', ['locale' => app()->getLocale(), 'legal_page' => $page]) }}" method="POST" onsubmit="return confirm('Supprimer cette page ?')">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="p-2 text-gray-400 hover:text-red-600 transition-colors">
+                                    <button type="submit" class="p-2 text-gray-400 hover:text-blue-600 transition-colors">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                                     </button>
                                 </form>

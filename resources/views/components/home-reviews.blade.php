@@ -4,15 +4,15 @@
     {{-- Decorative Background Elements --}}
     <div class="absolute inset-0 -z-10">
         <div class="absolute left-1/2 top-0 h-[500px] w-full -translate-x-1/2 bg-gradient-to-b from-gray-50 to-transparent"></div>
-        <div class="absolute -right-24 top-24 h-96 w-96 rounded-full bg-red-50/50 blur-3xl"></div>
+        <div class="absolute -right-24 top-24 h-96 w-96 rounded-full bg-blue-50/50 blur-3xl"></div>
         <div class="absolute -left-24 bottom-24 h-96 w-96 rounded-full bg-gray-100/50 blur-3xl"></div>
     </div>
 
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-base font-bold uppercase tracking-[0.2em] text-red-600">{{ __('Témoignages') }}</h2>
+            <h2 class="text-base font-bold uppercase tracking-[0.2em] text-blue-600">{{ __('Témoignages') }}</h2>
             <p class="mt-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl uppercase italic">
-                {!! __('Avis <span class="text-red-600">Clients</span>') !!}
+                {!! __('Avis <span class="text-blue-600">Clients</span>') !!}
             </p>
             <p class="mt-6 text-lg leading-8 text-gray-600">
                 {{ __('Découvrez pourquoi nos clients nous font confiance pour leur équipement professionnel.') }}
@@ -25,9 +25,9 @@
                 <div class="flex animate-scroll hover:[animation-play-state:paused] gap-8 py-4">
                     {{-- First set of reviews --}}
                     @foreach($reviews as $review)
-                        <div class="flex w-[350px] flex-none flex-col justify-between rounded-[2.5rem] border border-gray-100 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-100 hover:shadow-2xl hover:shadow-red-900/5">
+                        <div class="flex w-[350px] flex-none flex-col justify-between rounded-[2.5rem] border border-gray-100 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-100 hover:shadow-2xl hover:shadow-red-900/5">
                             {{-- Quote Icon --}}
-                            <div class="absolute top-6 right-8 text-gray-100 transition-colors group-hover:text-red-50">
+                            <div class="absolute top-6 right-8 text-gray-100 transition-colors group-hover:text-blue-50">
                                 <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 32 32">
                                     <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H7c0-1.7 1.3-3 3-3V8zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-7c0-1.7 1.3-3 3-3V8z" />
                                 </svg>
@@ -46,8 +46,8 @@
                                 </blockquote>
                             </div>
 
-                            <div class="mt-8 flex items-center gap-x-4 border-t border-gray-50 pt-6 transition-colors group-hover:border-red-50">
-                                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-red-600 to-red-700 font-black text-white shadow-lg shadow-red-200">
+                            <div class="mt-8 flex items-center gap-x-4 border-t border-gray-50 pt-6 transition-colors group-hover:border-blue-50">
+                                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 font-black text-white shadow-lg shadow-red-200">
                                     {{ substr($review['name'], 0, 1) }}
                                 </div>
                                 <div class="text-sm leading-6">
@@ -60,9 +60,9 @@
 
                     {{-- Duplicate set for seamless scrolling --}}
                     @foreach($reviews as $review)
-                        <div class="flex w-[350px] flex-none flex-col justify-between rounded-[2.5rem] border border-gray-100 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-100 hover:shadow-2xl hover:shadow-red-900/5">
+                        <div class="flex w-[350px] flex-none flex-col justify-between rounded-[2.5rem] border border-gray-100 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-100 hover:shadow-2xl hover:shadow-red-900/5">
                             {{-- Same content as above --}}
-                            <div class="absolute top-6 right-8 text-gray-100 transition-colors group-hover:text-red-50">
+                            <div class="absolute top-6 right-8 text-gray-100 transition-colors group-hover:text-blue-50">
                                 <svg class="h-12 w-12" fill="currentColor" viewBox="0 0 32 32">
                                     <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H7c0-1.7 1.3-3 3-3V8zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-7c0-1.7 1.3-3 3-3V8z" />
                                 </svg>
@@ -81,8 +81,8 @@
                                 </blockquote>
                             </div>
 
-                            <div class="mt-8 flex items-center gap-x-4 border-t border-gray-50 pt-6 transition-colors group-hover:border-red-50">
-                                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-red-600 to-red-700 font-black text-white shadow-lg shadow-red-200">
+                            <div class="mt-8 flex items-center gap-x-4 border-t border-gray-50 pt-6 transition-colors group-hover:border-blue-50">
+                                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 font-black text-white shadow-lg shadow-red-200">
                                     {{ substr($review['name'], 0, 1) }}
                                 </div>
                                 <div class="text-sm leading-6">

@@ -11,15 +11,15 @@
 
     <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
         <div class="max-w-3xl space-y-4">
-            <div class="inline-flex items-center gap-3 rounded-full bg-red-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-red-600 shadow-sm">
+            <div class="inline-flex items-center gap-3 rounded-full bg-blue-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-blue-600 shadow-sm">
                 <span class="relative flex h-2 w-2">
-                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
-                    <span class="relative inline-flex h-2 w-2 rounded-full bg-red-600"></span>
+                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex h-2 w-2 rounded-full bg-blue-600"></span>
                 </span>
                 {{ __('Catalogue Premium') }}
             </div>
             <h2 class="text-3xl font-black tracking-tight text-gray-900 sm:text-5xl">
-                {{ __('Nos Univers') }} <span class="text-red-600">.</span>
+                {{ __('Nos Univers') }} <span class="text-blue-600">.</span>
             </h2>
             <p class="text-base leading-relaxed text-gray-500 sm:text-lg">
                 {{ __('Découvrez une sélection rigoureuse de produits haute performance. Qualité industrielle, service local.') }}
@@ -74,7 +74,7 @@
 
             @foreach ($products as $product)
                 <div
-                    class="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-gray-100 bg-white p-2 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-100 hover:shadow-2xl hover:shadow-red-900/5"
+                    class="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-gray-100 bg-white p-2 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-100 hover:shadow-2xl hover:shadow-red-900/5"
                     x-show="activeCategory === '{{ $key }}'"
                     x-transition:enter="transition ease-out duration-300"
                     x-transition:enter-start="opacity-0 translate-y-4"
@@ -100,7 +100,7 @@
                         
                         {{-- Quick Actions Overlay --}}
                         <div class="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-center gap-2 p-6 transition-transform duration-500 group-hover:translate-y-0">
-                            <a href="{{ route('products.show', $product) }}" class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900 shadow-xl transition hover:bg-red-600 hover:text-white">
+                            <a href="{{ route('products.show', $product) }}" class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900 shadow-xl transition hover:bg-blue-600 hover:text-white">
                                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
                             </a>
                         </div>
@@ -110,8 +110,8 @@
                     <div class="flex flex-1 flex-col p-6 pt-5" x-data="{ qty: 1 }">
                         <div class="mb-4 flex items-center justify-between">
                             <div class="flex flex-col">
-                                <span class="text-[10px] font-bold uppercase tracking-widest text-red-600">{{ __('Réf') }}: {{ $product->sku }}</span>
-                                <h3 class="mt-1 line-clamp-1 text-base font-bold text-gray-900 transition-colors group-hover:text-red-600">
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-blue-600">{{ __('Réf') }}: {{ $product->sku }}</span>
+                                <h3 class="mt-1 line-clamp-1 text-base font-bold text-gray-900 transition-colors group-hover:text-blue-600">
                                     <a href="{{ route('products.show', $product) }}">{{ $product->title }}</a>
                                 </h3>
                             </div>
@@ -132,7 +132,7 @@
 
                         <div class="mt-auto flex flex-col gap-3">
                             {{-- Quantity Selector --}}
-                            <div class="flex items-center justify-between rounded-2xl bg-gray-50 p-2 transition-colors group-hover:bg-red-50/50">
+                            <div class="flex items-center justify-between rounded-2xl bg-gray-50 p-2 transition-colors group-hover:bg-blue-50/50">
                                 <span class="pl-2 text-[10px] font-bold uppercase tracking-widest text-gray-400">{{ __('Quantité') }}</span>
                                 <div class="flex items-center gap-2">
                                     <button @click="qty > 1 ? qty-- : null" class="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-gray-900 shadow-sm transition hover:bg-gray-100">-</button>
@@ -144,7 +144,7 @@
                             {{-- Order Button --}}
                             <a
                                 :href="'{{ route('order.index') }}' + '?product=' + encodeURIComponent('{{ addslashes($product->title) }}') + '&sku=' + encodeURIComponent('{{ addslashes($product->sku) }}') + '&qty=' + qty"
-                                class="group/btn relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-red-600 px-8 py-5 text-[11px] font-black uppercase tracking-widest text-white shadow-lg shadow-red-900/20 transition-all hover:bg-red-700 hover:shadow-red-900/40"
+                                class="group/btn relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-blue-600 px-8 py-5 text-[11px] font-black uppercase tracking-widest text-white shadow-lg shadow-red-900/20 transition-all hover:bg-blue-700 hover:shadow-red-900/40"
                             >
                                 <span class="relative z-10">{{ $isDevisCategory ? __('Devis') : __('Commander') }}</span>
                                 <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover/btn:translate-x-full"></div>
@@ -153,7 +153,7 @@
                             @if (! $isDevisCategory)
                                 <a
                                     :href="'{{ route('quote.index') }}' + '?product=' + encodeURIComponent('{{ addslashes($product->title) }}') + '&sku=' + encodeURIComponent('{{ addslashes($product->sku) }}') + '&qty=' + qty"
-                                    class="mt-1 text-center text-[10px] font-bold uppercase tracking-widest text-gray-400 transition hover:text-red-600"
+                                    class="mt-1 text-center text-[10px] font-bold uppercase tracking-widest text-gray-400 transition hover:text-blue-600"
                                 >
                                     {{ __('Demande de renseignements') }}
                                 </a>

@@ -27,30 +27,30 @@
                             <div class="sm:col-span-2">
                                 <label for="name" class="block text-sm font-bold text-gray-900 mb-2">{{ __('Nom complet') }}</label>
                                 <input type="text" name="name" id="name" required
-                                    class="block w-full rounded-2xl border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 shadow-sm focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                                    class="block w-full rounded-2xl border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 shadow-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all">
                             </div>
 
                             <div class="sm:col-span-2">
                                 <label for="email" class="block text-sm font-bold text-gray-900 mb-2">{{ __('Email') }}</label>
                                 <input type="email" name="email" id="email" required
-                                    class="block w-full rounded-2xl border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 shadow-sm focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                                    class="block w-full rounded-2xl border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 shadow-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all">
                             </div>
 
                             <div class="sm:col-span-2">
                                 <label for="phone" class="block text-sm font-bold text-gray-900 mb-2">{{ __('Téléphone') }}</label>
                                 <input type="tel" name="phone" id="phone"
-                                    class="block w-full rounded-2xl border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 shadow-sm focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                                    class="block w-full rounded-2xl border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 shadow-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all">
                             </div>
 
                             <div class="sm:col-span-2">
                                 <label for="message" class="block text-sm font-bold text-gray-900 mb-2">{{ __('Votre demande / Besoins spécifiques') }}</label>
                                 <textarea name="message" id="message" rows="4"
-                                    class="block w-full rounded-2xl border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 shadow-sm focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">@if($product){{ __('Je souhaite obtenir un devis pour :') }} {{ $product }} (SKU: {{ $sku }}) x{{ $qty ?? 1 }}@endif</textarea>
+                                    class="block w-full rounded-2xl border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 shadow-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all">@if($product){{ __('Je souhaite obtenir un devis pour :') }} {{ $product }} (SKU: {{ $sku }}) x{{ $qty ?? 1 }}@endif</textarea>
                             </div>
                         </div>
 
                         <div class="mt-10">
-                            <button type="submit" class="block w-full rounded-2xl bg-red-600 px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-white shadow-xl shadow-red-900/20 hover:bg-red-700 hover:scale-[1.02] active:scale-95 transition-all">
+                            <button type="submit" class="block w-full rounded-2xl bg-blue-600 px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-white shadow-xl shadow-red-900/20 hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all">
                                 {{ __('Envoyer ma demande') }}
                             </button>
                         </div>

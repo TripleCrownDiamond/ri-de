@@ -112,7 +112,7 @@
                             
                             <h1 class="text-4xl font-black leading-[1.1] tracking-tight sm:text-6xl lg:text-8xl">
                                 <span class="block text-white" x-text="slide.title.split(' ').slice(0, -1).join(' ')"></span>
-                                <span class="block bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent" x-text="slide.title.split(' ').pop()"></span>
+                                <span class="block bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent" x-text="slide.title.split(' ').pop()"></span>
                             </h1>
 
                             <p class="max-w-xl text-lg leading-relaxed text-gray-300 sm:text-xl font-medium" x-text="slide.description"></p>
@@ -120,7 +120,7 @@
                             <div class="flex flex-wrap items-center gap-5 pt-4">
                                 <a
                                     href="{{ route('shop.index') }}"
-                                    class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-red-600 px-10 py-5 text-sm font-black uppercase tracking-widest text-white shadow-2xl shadow-red-900/40 transition-all hover:bg-red-700 hover:-translate-y-1 active:scale-95"
+                                    class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-blue-600 px-10 py-5 text-sm font-black uppercase tracking-widest text-white shadow-2xl shadow-red-900/40 transition-all hover:bg-blue-700 hover:-translate-y-1 active:scale-95"
                                 >
                                     <span class="relative z-10">{{ __('messages.hero.cta.trailers') }}</span>
                                     <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full"></div>
@@ -135,20 +135,20 @@
 
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/10">
                                 <div class="flex items-center gap-4 group">
-                                    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/10 group-hover:border-red-500/50 transition-colors">
-                                        <svg class="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                                    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/10 group-hover:border-blue-500/50 transition-colors">
+                                        <svg class="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                                     </div>
                                     <span class="text-xs font-bold uppercase tracking-wider text-gray-400 group-hover:text-white transition-colors">{{ __('messages.hero.badges.security') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4 group">
-                                    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/10 group-hover:border-red-500/50 transition-colors">
-                                        <svg class="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/10 group-hover:border-blue-500/50 transition-colors">
+                                        <svg class="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                                     </div>
                                     <span class="text-xs font-bold uppercase tracking-wider text-gray-400 group-hover:text-white transition-colors">{{ __('messages.hero.badges.warranty') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4 group">
-                                    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/10 group-hover:border-red-500/50 transition-colors">
-                                        <svg class="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                                    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/10 group-hover:border-blue-500/50 transition-colors">
+                                        <svg class="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                                     </div>
                                     <span class="text-xs font-bold uppercase tracking-wider text-gray-400 group-hover:text-white transition-colors">{{ __('messages.hero.badges.workshop') }}</span>
                                 </div>
@@ -160,7 +160,7 @@
         </div>
 
         <!-- Progress bar indicator -->
-        <div class="absolute bottom-0 left-0 h-1 bg-red-600 transition-all duration-[7000ms] ease-linear" :style="`width: ${((current + 1) / slides.length) * 100}%`" :key="current"></div>
+        <div class="absolute bottom-0 left-0 h-1 bg-blue-600 transition-all duration-[7000ms] ease-linear" :style="`width: ${((current + 1) / slides.length) * 100}%`" :key="current"></div>
 
         <div class="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-6 py-8">
             <div class="flex items-center gap-6">
@@ -172,7 +172,7 @@
                     >
                         <span class="text-[10px] font-black uppercase tracking-widest text-white" x-text="`0${index + 1}`"></span>
                         <div class="h-1 w-12 overflow-hidden rounded-full bg-white/20">
-                            <div class="h-full bg-red-600 transition-all duration-500" :class="current === index ? 'w-full' : 'w-0'"></div>
+                            <div class="h-full bg-blue-600 transition-all duration-500" :class="current === index ? 'w-full' : 'w-0'"></div>
                         </div>
                         <span class="hidden text-xs font-bold text-white sm:block" x-text="slide.badge"></span>
                     </button>

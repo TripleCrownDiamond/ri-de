@@ -16,7 +16,7 @@
 
             <div class="mx-auto max-w-2xl bg-white rounded-[2.5rem] p-8 shadow-xl shadow-gray-200/50 border border-gray-100 text-left">
                 <h3 class="text-xs font-black uppercase tracking-widest text-gray-400 mb-6 flex items-center">
-                    <svg class="w-4 h-4 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 11h14a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2z"/></svg>
+                    <svg class="w-4 h-4 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 11h14a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2z"/></svg>
                     {{ __('Zusammenfassung der Bestellung') }}
                 </h3>
 
@@ -47,7 +47,7 @@
                     @if($order->product_price)
                     <div class="flex justify-between pt-2">
                         <span class="text-gray-900 font-black uppercase text-xs tracking-widest">{{ __('Gesamtbetrag') }}</span>
-                        <span class="font-black text-xl text-red-600">{{ number_format($order->product_price * $order->quantity, 2, ',', '.') }} €</span>
+                        <span class="font-black text-xl text-blue-600">{{ number_format($order->product_price * $order->quantity, 2, ',', '.') }} €</span>
                     </div>
                     @endif
                 </div>
@@ -59,8 +59,8 @@
                     @endphp
 
                     @if($instructions || $hasRib)
-                        <div class="p-6 bg-red-50 rounded-2xl border border-red-100 mb-8">
-                            <h4 class="text-xs font-black uppercase tracking-widest text-red-600 mb-4 flex items-center">
+                        <div class="p-6 bg-blue-50 rounded-2xl border border-blue-100 mb-8">
+                            <h4 class="text-xs font-black uppercase tracking-widest text-blue-600 mb-4 flex items-center">
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
                                 {{ __('Zahlungsinformationen') }}
                             </h4>
@@ -72,7 +72,7 @@
                             @endif
 
                             @if($hasRib)
-                                <div class="space-y-3 text-sm border-t border-red-100 pt-4">
+                                <div class="space-y-3 text-sm border-t border-blue-100 pt-4">
                                     @if($company_info->bank_name)
                                     <div class="flex justify-between">
                                         <span class="text-gray-500 font-bold uppercase text-[9px] tracking-widest">{{ __('Bank') }}</span>
@@ -102,7 +102,7 @@
                 @endif
 
                 <div class="mt-10">
-                    <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="block w-full rounded-2xl bg-gray-900 px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-white shadow-xl shadow-gray-900/20 hover:bg-red-600 transition-all">
+                    <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="block w-full rounded-2xl bg-gray-900 px-8 py-4 text-center text-sm font-black uppercase tracking-widest text-white shadow-xl shadow-gray-900/20 hover:bg-blue-600 transition-all">
                         {{ __('Zurück zur Startseite') }}
                     </a>
                 </div>

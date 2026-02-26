@@ -84,7 +84,7 @@
                                 @endphp
                                 <div 
                                     class="cursor-pointer overflow-hidden rounded-2xl bg-gray-100 ring-offset-2 transition-all hover:opacity-80"
-                                    :class="mainImage === '{{ $mediaUrl }}' ? 'ring-2 ring-red-600' : ''"
+                                    :class="mainImage === '{{ $mediaUrl }}' ? 'ring-2 ring-blue-600' : ''"
                                     @click="mainImage = '{{ $mediaUrl }}'"
                                 >
                                     <img
@@ -202,7 +202,7 @@
                     <div class="flex flex-col gap-3">
                         <a
                             :href="'{{ route('order.index') }}' + '?product=' + encodeURIComponent('{{ addslashes($product->title) }}') + '&sku=' + encodeURIComponent('{{ addslashes($product->sku) }}') + '&qty=' + qty"
-                            class="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-red-600 px-8 py-5 text-xs font-black uppercase tracking-widest text-white shadow-xl shadow-red-900/20 transition-all hover:bg-red-700 hover:shadow-red-900/40 active:scale-95"
+                            class="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-blue-600 px-8 py-5 text-xs font-black uppercase tracking-widest text-white shadow-xl shadow-red-900/20 transition-all hover:bg-blue-700 hover:shadow-red-900/40 active:scale-95"
                         >
                             <span class="relative z-10">{{ $isDevisCategory ? __('Demander un devis') : __('Commander ce modèle') }}</span>
                             <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full"></div>
@@ -230,7 +230,7 @@
                 </div>
                 <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     @foreach ($similarProducts as $similar)
-                        <div class="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-gray-100 bg-white p-2 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-100 hover:shadow-2xl hover:shadow-red-900/5">
+                        <div class="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-gray-100 bg-white p-2 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-100 hover:shadow-2xl hover:shadow-red-900/5">
                             <!-- Image Container -->
                             <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gray-50">
                                 @php
@@ -256,7 +256,7 @@
 
                                 <!-- Quick View Overlay -->
                                 <div class="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-center gap-2 p-6 transition-transform duration-500 group-hover:translate-y-0">
-                                    <a href="{{ route('products.show', $similar) }}" class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900 shadow-xl transition hover:bg-red-600 hover:text-white">
+                                    <a href="{{ route('products.show', $similar) }}" class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900 shadow-xl transition hover:bg-blue-600 hover:text-white">
                                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
                                     </a>
                                 </div>
@@ -265,8 +265,8 @@
                             <!-- Content -->
                             <div class="flex flex-1 flex-col p-6 pt-5" x-data="{ qty: 1 }">
                                 <div class="mb-4">
-                                    <span class="text-[10px] font-bold uppercase tracking-widest text-red-600">{{ __('Réf') }}: {{ $similar->sku }}</span>
-                                    <h3 class="mt-1 line-clamp-2 text-base font-bold text-gray-900 transition-colors group-hover:text-red-600">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-blue-600">{{ __('Réf') }}: {{ $similar->sku }}</span>
+                                    <h3 class="mt-1 line-clamp-2 text-base font-bold text-gray-900 transition-colors group-hover:text-blue-600">
                                         <a href="{{ route('products.show', $similar) }}">{{ $similar->title }}</a>
                                     </h3>
                                 </div>
@@ -283,7 +283,7 @@
                                 <!-- Action Buttons -->
                                 <div class="mt-auto flex flex-col gap-3">
                                     {{-- Quantity Selector --}}
-                                    <div class="flex items-center justify-between rounded-2xl bg-gray-50 p-2 transition-colors group-hover:bg-red-50/50">
+                                    <div class="flex items-center justify-between rounded-2xl bg-gray-50 p-2 transition-colors group-hover:bg-blue-50/50">
                                         <span class="pl-2 text-[10px] font-bold uppercase tracking-widest text-gray-400">{{ __('Quantité') }}</span>
                                         <div class="flex items-center gap-2">
                                             <button @click="qty > 1 ? qty-- : null" class="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-gray-900 shadow-sm transition hover:bg-gray-100">-</button>
@@ -296,7 +296,7 @@
                                     @if ($similar->price_ttc)
                                         <a
                                             :href="'{{ route('order.index') }}' + '?product=' + encodeURIComponent('{{ addslashes($similar->title) }}') + '&sku=' + encodeURIComponent('{{ addslashes($similar->sku) }}') + '&qty=' + qty"
-                                            class="group/btn relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-red-600 px-8 py-5 text-[11px] font-black uppercase tracking-widest text-white shadow-lg shadow-red-900/20 transition-all hover:bg-red-700 hover:shadow-red-900/40"
+                                            class="group/btn relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-blue-600 px-8 py-5 text-[11px] font-black uppercase tracking-widest text-white shadow-lg shadow-red-900/20 transition-all hover:bg-blue-700 hover:shadow-red-900/40"
                                         >
                                             <span class="relative z-10">{{ __('Commander') }}</span>
                                             <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover/btn:translate-x-full"></div>
@@ -304,7 +304,7 @@
                                     @else
                                         <a
                                             :href="'{{ route('quote.index') }}' + '?product=' + encodeURIComponent('{{ addslashes($similar->title) }}') + '&sku=' + encodeURIComponent('{{ addslashes($similar->sku) }}') + '&qty=' + qty"
-                                            class="group/btn relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gray-900 px-8 py-5 text-[11px] font-black uppercase tracking-widest text-white shadow-lg shadow-gray-900/20 transition-all hover:bg-red-600 hover:shadow-red-900/40"
+                                            class="group/btn relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gray-900 px-8 py-5 text-[11px] font-black uppercase tracking-widest text-white shadow-lg shadow-gray-900/20 transition-all hover:bg-blue-600 hover:shadow-red-900/40"
                                         >
                                             <span class="relative z-10">{{ __('Demande de devis') }}</span>
                                             <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover/btn:translate-x-full"></div>

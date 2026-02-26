@@ -51,7 +51,7 @@
                                             'pending' => 'bg-amber-50 text-amber-600',
                                             'processing' => 'bg-blue-50 text-blue-600',
                                             'completed' => 'bg-green-50 text-green-600',
-                                            'cancelled' => 'bg-red-50 text-red-600',
+                                            'cancelled' => 'bg-blue-50 text-blue-600',
                                         ];
                                         $statusLabels = [
                                             'pending' => 'En attente',
@@ -65,7 +65,7 @@
                                     </span>
                                 </td>
                                 <td class="px-8 py-6 text-right">
-                                    <button class="text-xs font-black uppercase tracking-widest text-gray-400 hover:text-red-600 transition-colors">
+                                    <button class="text-xs font-black uppercase tracking-widest text-gray-400 hover:text-blue-600 transition-colors">
                                         {{ __('Détails') }}
                                     </button>
                                 </td>
@@ -78,7 +78,7 @@
                                             <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                                         </div>
                                         <p class="text-sm font-bold text-gray-400 uppercase tracking-widest">{{ __('Aucune commande pour le moment') }}</p>
-                                        <a href="{{ route('shop.index') }}" class="mt-6 text-red-600 font-black uppercase tracking-widest text-xs hover:underline">
+                                        <a href="{{ route('shop.index') }}" class="mt-6 text-blue-600 font-black uppercase tracking-widest text-xs hover:underline">
                                             {{ __('Parcourir la boutique') }}
                                         </a>
                                     </div>

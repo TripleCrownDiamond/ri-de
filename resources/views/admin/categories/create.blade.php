@@ -13,35 +13,35 @@
                 <div>
                     <label class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Nom de la catégorie (FR)</label>
                     <input type="text" name="name_fr" value="{{ old('name_fr', $category->name_fr ?? '') }}" required
-                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-red-600 font-bold transition-all">
+                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 font-bold transition-all">
                 </div>
 
                 <div>
                     <label class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Nom de la catégorie (DE)</label>
                     <input type="text" name="name_de" value="{{ old('name_de', $category->name_de ?? '') }}"
-                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-red-600 font-bold transition-all">
+                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 font-bold transition-all">
                 </div>
 
                 <div class="hidden">
                     <label class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Nom Technique (Interne)</label>
                     <input type="text" name="name" value="{{ old('name', $category->name ?? '') }}"
-                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-red-600 font-bold transition-all">
+                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 font-bold transition-all">
                 </div>
 
                 <div>
                     <label class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Description (Optionnel)</label>
                     <textarea name="description" rows="4"
-                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-red-600 font-medium transition-all">{{ old('description', $category->description ?? '') }}</textarea>
+                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 font-medium transition-all">{{ old('description', $category->description ?? '') }}</textarea>
                 </div>
 
                 <div>
                     <label class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Position (Ordre d'affichage)</label>
                     <input type="number" name="position" value="{{ old('position', $category->position ?? 0) }}" min="0"
-                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-red-600 font-bold transition-all">
+                        class="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 font-bold transition-all">
                 </div>
 
                 <div class="pt-4">
-                    <button type="submit" class="w-full py-4 bg-red-600 text-white font-black uppercase tracking-widest rounded-2xl shadow-xl shadow-red-900/20 hover:bg-red-700 hover:scale-[1.02] active:scale-95 transition-all">
+                    <button type="submit" class="w-full py-4 bg-blue-600 text-white font-black uppercase tracking-widest rounded-2xl shadow-xl shadow-red-900/20 hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all">
                         {{ isset($category) ? 'Mettre à jour' : 'Créer la catégorie' }}
                     </button>
                 </div>
