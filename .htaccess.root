@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Empêcher le listage des fichiers
+    Options -Indexes
+
+    # Si la requête pointe déjà vers le dossier web/public, on arrête ici
+    RewriteCond %{REQUEST_URI} ^/web/public/
+    RewriteRule ^ - [L]
+
+    # Rediriger toutes les autres requêtes vers web/public de manière transparente
+    # On utilise web (minuscule) comme demandé
+    RewriteRule ^(.*)$ web/public/$1 [L,QSA]
+</IfModule>
